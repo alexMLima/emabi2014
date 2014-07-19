@@ -1,0 +1,77 @@
+<h2 class="title">
+                                                     <a href="#">
+                                                     Minicursos
+                                                     </a>
+                                                 </h2>
+                                            
+     
+                                        <?
+                                                                $i = 1;
+                                                                while ($i <= 3) {
+                                                                    $objMinicursos = new Minicursos;
+                                                                    $qryMinicursos = $objMinicursos->PesquisarPorGrupo($i);
+                                                                    $minicursos = mysql_fetch_array($qryMinicursos);
+                                        ?>
+                                                                    <table border="1" bordercolor="#CCCCCC">
+                                                                        <tr>
+                                                                            <td colspan="3">
+                                                                                <b><? echo "Grupo 0".$i." - ".$minicursos['diasemana'] . " - " . $minicursos['horario']; ?></b>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><input type="radio" name="<? echo "g" . $i; ?>" checked="checked" value="0" /></td>
+                                                                            <td> </td>
+                                                                            <td>Nenhum minicurso</td>
+                                                                        </tr>
+                                            <?
+                                                                    $qryMinicursos = $objMinicursos->PesquisarPorGrupo($i);
+
+                                                                    switch ($i) {
+                                                                        case 1:
+                                                                            $gminicurso = $g1;
+                                                                            break;
+                                                                        case 2:
+                                                                            $gminicurso = $g2;
+                                                                            break;
+                                                                        case 3:
+                                                                            $gminicurso = $g3;
+                                                                            break;
+                                                                    }
+
+                                                                    while ($minicursos = mysql_fetch_array($qryMinicursos)) {
+                                            ?>
+
+                                                                        <tr>
+                                                                            <td>
+                                                    <? if ($minicursos["nvagas"] - $minicursos["nvagaspreenc"] > 0) {
+                                                    ?>
+                                                                            <input type="radio" name="<? echo "g" . $i; ?>" value="<? echo $minicursos['id']; ?>" <?
+                                                                            if ($minicursos['id'] == $gminicurso) {
+                                                                                echo 'checked = "checked" ';
+                                                                            }
+                                                    ?> />
+
+                                                    <? } else {
+                                                    ?>
+                                                                            <img src="images/exc.gif" />
+                                                    <? } ?>
+                                                                    </td>
+                                                                    <td><? echo $minicursos['nminicurso']; ?></td>
+                                                                    <td>
+                                                    <?
+                                                                        echo "<b>" . $minicursos['titulo'] . "</b>";
+
+                                                                        if ($minicursos["nvagas"] - $minicursos["nvagaspreenc"] <= 0) {
+                                                    ?>
+                                                                            <font color="#FF0000"> (Esgotada) </font>
+                                                    <?
+                                                                        } else {
+                                                                            echo " (" . ($minicursos["nvagas"] - $minicursos["nvagaspreenc"]) . " Vaga(s) )";
+                                                                        }
+                                                    ?>
+                                                                    </td>
+                                                                </tr>
+                                            <? } ?>
+                                                                </table>
+                                        <? $i++;
+                                                                } ?>
