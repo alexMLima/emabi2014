@@ -43,7 +43,7 @@
 				//include_once '../../../minicursos/Minicursos.class.php';
 				//$objMinicursos = new Minicursos;
                                 $dataatual = date("Y-m-d H:i:s");
-                                $qryMinicursos = mysql_query("SELECT * from c2013_palestras WHERE datafechamento > '".$dataatual."'");
+                                $qryMinicursos = mysql_query("SELECT * from c2014_palestras WHERE datafechamento > '".$dataatual."'");
 				while ($dados = mysql_fetch_array($qryMinicursos)){ ?>
 					<option value="<? echo $dados['id']; ?>" <? if ($dados['id'] == 11) echo " selected";?> ><? echo  $dados['nminicurso']." - ".$dados['titulo']; ?></option>	
 				<? }?>

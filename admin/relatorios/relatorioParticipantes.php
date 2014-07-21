@@ -47,7 +47,7 @@
 			$pdf->Row(array("NOME",$part['nome']));
 			$pdf->Row(array("SEXO",$part['sexo']));	
 			
-			$qrycat = mysql_query("SELECT descricao FROM c2013_categorias WHERE id = ".$part['categoria']);
+			$qrycat = mysql_query("SELECT descricao FROM c2014_categorias WHERE id = ".$part['categoria']);
 			$dadoscat = mysql_fetch_array($qrycat);
 			
 			$pdf->Row(array("CATEGORIA",$dadoscat['descricao']));	

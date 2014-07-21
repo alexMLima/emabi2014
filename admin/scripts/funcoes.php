@@ -36,7 +36,7 @@ function buscaEstados()
 	
 	$MySQLi = new MySQLi(BD_SERVIDOR, BD_USUARIO, BD_SENHA, BD_NOME);
 	
-	$sql = $MySQLi->query('Select * From c2013_estados Order By nome ASC');
+	$sql = $MySQLi->query('Select * From c2014_estados Order By nome ASC');
 	
 	while ($f = $sql->fetch_object())
 	{
@@ -66,7 +66,7 @@ function buscaCidades()
 	
 	$MySQLi = new MySQLi(BD_SERVIDOR, BD_USUARIO, BD_SENHA, BD_NOME);
 	
-	$sql = $MySQLi->query('Select id, nome From c2013_cidades Where id_uf = ' . $uf . ' Order By nome ASC');
+	$sql = $MySQLi->query('Select id, nome From c2014_cidades Where id_uf = ' . $uf . ' Order By nome ASC');
 	
 	while ($f = $sql->fetch_object())
 	{

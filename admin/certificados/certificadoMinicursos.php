@@ -17,8 +17,8 @@
 	$idp = $_GET['idp'];
 			
 	$sql = 'SELECT p . nome , of . titulo, of.cargahoraria FROM '
-        . ' c2013_inscricao as p '
-        . ' JOIN ( c2013_minicursos as of , c2013_participantes_minicursos as iof ) '
+        . ' c2014_inscricao as p '
+        . ' JOIN ( c2014_minicursos as of , c2014_participantes_minicursos as iof ) '
         . ' ON ( p . id = iof . id_participante AND of . id = iof . id_minicurso ) '
         . ' WHERE of . id = '.$nof.' AND p.pago = "S" ';
 	

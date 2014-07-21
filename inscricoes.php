@@ -296,7 +296,7 @@ include "includes/head.php";
                                         <select name="categoria">
                                             <option value="0" selected="selected">--Selecione uma op&ccedil;&atilde;o--</option>
                                             <?
-                                            $qryCat = mysql_query("SELECT * FROM c2013_categorias order by codigo");
+                                            $qryCat = mysql_query("SELECT * FROM c2014_categorias order by codigo");
                                             while ($categorias = mysql_fetch_array($qryCat)){
                                             ?>
                                                 <option value="<? echo $categorias["id"]; ?>" <?

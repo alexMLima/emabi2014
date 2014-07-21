@@ -29,7 +29,7 @@ class Comissoes{
          $this->area3 = $Comissao->GetArea3();
        
 
-      $query = "INSERT INTO c2013_comissao (NOME,EMAIL,LOGIN,SENHA,PERMISSAO,AVALIADOR,AREA1, AREA2, AREA3) VALUES ('$this->nome','$this->email','$this->login','$this->senha','$this->permissao','$this->avaliador','$this->area1','$this->area2','$this->area3')";
+      $query = "INSERT INTO c2014_comissao (NOME,EMAIL,LOGIN,SENHA,PERMISSAO,AVALIADOR,AREA1, AREA2, AREA3) VALUES ('$this->nome','$this->email','$this->login','$this->senha','$this->permissao','$this->avaliador','$this->area1','$this->area2','$this->area3')";
 
       mysql_query($query) or die("Erro: ".mysql_error());
 
@@ -56,7 +56,7 @@ class Comissoes{
          $this->area2 = $Comissao->GetArea2();
          $this->area3 = $Comissao->GetArea3();
 
-      $query =  "UPDATE c2013_comissao ";
+      $query =  "UPDATE c2014_comissao ";
 	  $query .= "   SET NOME = '$this->nome',";
 	  $query .= "   EMAIL = '$this->email',";
 	  $query .= "   LOGIN = '$this->login',";
@@ -85,13 +85,13 @@ class Comissoes{
    
     
    public function excluir($id){
-      $query = "DELETE FROM c2013_comissao WHERE id = '$id'";
+      $query = "DELETE FROM c2014_comissao WHERE id = '$id'";
       mysql_query($query) or die("Erro: ".mysql_error());
       return 'Exclus�o efetuada com sucesso.';
    }
 
    public function pesquisar($id){
-      $query = "SELECT * FROM c2013_comissao WHERE id = '$id'";
+      $query = "SELECT * FROM c2014_comissao WHERE id = '$id'";
       $resultado = mysql_query($query) or die("Erro: ".mysql_error());
       return $resultado;
    }
@@ -155,37 +155,37 @@ class Comissoes{
 		
     
 	public function PesquisarLogineSenha($login, $senha){
-		$query = "SELECT * FROM c2013_comissao
+		$query = "SELECT * FROM c2014_comissao
 						   WHERE login = '$login' and senha = '$senha'";
 		$resultado = mysql_query($query) or die("Erro: ".mysql_error());
 		return $resultado;	
     }
 	public function PesquisarLogin($login){
-		$query = "SELECT * FROM c2013_comissao
+		$query = "SELECT * FROM c2014_comissao
 						   WHERE login = '$login'";
 		$resultado = mysql_query($query) or die("Erro: ".mysql_error());
 		return $resultado;	
     }		
 	public function PesquisarAvaliadores(){
-		$query = "SELECT * FROM c2013_comissao
+		$query = "SELECT * FROM c2014_comissao
 						   WHERE avaliador = 'S'";
 		$resultado = mysql_query($query) or die("Erro: ".mysql_error());
 		return $resultado;	
     }
 
     public function PesquisarAvaliadoresDaArea($area){
-		$query = "SELECT * FROM c2013_comissao WHERE avaliador = 'S' AND (AREA1 = $area OR AREA2 = $area OR AREA3 = $area)";
+		$query = "SELECT * FROM c2014_comissao WHERE avaliador = 'S' AND (AREA1 = $area OR AREA2 = $area OR AREA3 = $area)";
 		$resultado = mysql_query($query) or die("Erro: ".mysql_error());
 		return $resultado;
     }
 	public function ListarTodos(){
-		$query = "SELECT * FROM c2013_comissao WHERE avaliador = 'S' AND id <> '999' ORDER BY nome";
+		$query = "SELECT * FROM c2014_comissao WHERE avaliador = 'S' AND id <> '999' ORDER BY nome";
 		$resultado = mysql_query($query) or die("Erro: ".mysql_error());
 		return $resultado;	
     }
 	
 	public function ConsultaTabela(){
-		$query = "SELECT * FROM c2013_comissao WHERE id <> '999' ORDER BY nome";
+		$query = "SELECT * FROM c2014_comissao WHERE id <> '999' ORDER BY nome";
 		$resultado = mysql_query($query) or die("Erro: ".mysql_error());
 		return $resultado;	
     }

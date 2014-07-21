@@ -15,7 +15,7 @@ Class ParticipantesMinicursos{
          $this->idParticipante = $ParticipantesMinicursos->GetIdParticipante();
          $data_entrada = date( 'Y-m-d H:s:i' );
 
-      $query = "INSERT INTO c2013_participantes_minicursos (ID_MINICURSO,ID_PARTICIPANTE,DATA_ENTRADA) VALUES ('$this->idMinicurso','$this->idParticipante', '$data_entrada')";
+      $query = "INSERT INTO c2014_participantes_minicursos (ID_MINICURSO,ID_PARTICIPANTE,DATA_ENTRADA) VALUES ('$this->idMinicurso','$this->idParticipante', '$data_entrada')";
       mysql_query($query) or die("Erro: ".mysql_error());
 		
       return 'OK';
@@ -26,19 +26,19 @@ Class ParticipantesMinicursos{
    }
 
    public function excluir($id){
-      $query = "DELETE FROM c2013_participantes_minicursos WHERE id = '$id'";
+      $query = "DELETE FROM c2014_participantes_minicursos WHERE id = '$id'";
       mysql_query($query) or die("Erro: ".mysql_error()); 
       return 'Exclus�o efetuada com sucesso.';
    }
    
    public function excluirMinicursodoParticipante($idp, $idm){
-      $query = "DELETE FROM c2013_participantes_minicursos WHERE id_participante = '$idp' AND id_minicurso = '$idm'";
+      $query = "DELETE FROM c2014_participantes_minicursos WHERE id_participante = '$idp' AND id_minicurso = '$idm'";
       mysql_query($query) or die("Erro: ".mysql_error());
       return 'Exclus�o efetuada com sucesso.';
    }
 
    public function pesquisar($id){
-      $query = "SELECT * FROM c2013_participantes_minicursos WHERE id = '$id'";
+      $query = "SELECT * FROM c2014_participantes_minicursos WHERE id = '$id'";
       $resultado = mysql_query($query) or die("Erro: ".mysql_error());
       return $resultado;
    }

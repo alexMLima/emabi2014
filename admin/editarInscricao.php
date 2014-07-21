@@ -98,7 +98,7 @@ else
                                                  <select name="slCategoria">
                                                         <option value="0" selected="selected">--Selecione uma op��o--</option>
                                                     <?
-                                                                                        $qryCat = mysql_query("SELECT * FROM c2013_categorias order by codigo");
+                                                                                        $qryCat = mysql_query("SELECT * FROM c2014_categorias order by codigo");
                                                                                         while ($categorias = mysql_fetch_array($qryCat)){
                                                                                         ?>
                                                         <option value="<? echo $categorias["id"]; ?>" <? if ($categorias["id"] == $slCategoria) { echo "selected='selected'"; } ?> ><? echo $categorias["descricao"]; ?></option>
@@ -142,8 +142,8 @@ else
                                 <td>
                                     <b>
 									<?
-                                	$municipio = mysql_fetch_array(mysql_query("SELECT nome, id_uf from c2013_cidades where id = '$slCidade'"));
-									$estado = mysql_fetch_array(mysql_query("SELECT nome from c2013_estados where id = ".$municipio["id_uf"]));
+                                	$municipio = mysql_fetch_array(mysql_query("SELECT nome, id_uf from c2014_cidades where id = '$slCidade'"));
+									$estado = mysql_fetch_array(mysql_query("SELECT nome from c2014_estados where id = ".$municipio["id_uf"]));
 									echo $municipio['nome']." - ".$estado['nome'];								
 									?>
                                     </b>

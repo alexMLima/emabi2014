@@ -35,7 +35,7 @@ function buscaEstados()
 	
 	$xml .= '<estados>';
 			
-	$sql = mysql_query('SELECT * FROM c2013_estados Order By nome ASC');
+	$sql = mysql_query('SELECT * FROM c2014_estados Order By nome ASC');
 	
 	while ($f = mysql_fetch_array($sql))
 	{
@@ -60,7 +60,7 @@ function buscaCidades()
 	
 	$xml .= '<cidades>';
 	
-	$sql =  mysql_query('Select id, nome From c2013_cidades Where id_uf = ' . $uf . ' Order By nome ASC');
+	$sql =  mysql_query('Select id, nome From c2014_cidades Where id_uf = ' . $uf . ' Order By nome ASC');
 	
 	while ($f = mysql_fetch_array($sql))
 	{

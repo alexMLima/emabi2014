@@ -172,7 +172,7 @@ ul#primary-nav li.over { background-color: #333333; }
 	<p align="center">
     Contador de visitas<br /><br />	
 	<?
-	$qry = mysql_query("SELECT nvisitas from c2013_contador");
+	$qry = mysql_query("SELECT nvisitas from c2014_contador");
 	$dados =mysql_fetch_array($qry);
 	echo "<b>".str_pad($dados["nvisitas"], 6, "0", STR_PAD_LEFT)."</b>";
 	?>	

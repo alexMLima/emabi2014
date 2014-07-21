@@ -1,20 +1,19 @@
 <div class="sidebar">
      <h3>NAVEGA&Ccedil;&Atilde;O</h3>
-     <ul>
+     <ul id="tabs">
      	 <li><a href="<?=BASE_URL?>/index.php" title="">Home</a></li>
          <li><a href="<?=BASE_URL?>/palestras.php">Programa&ccedil;&atilde;o Completa</a></li>
+         <li><a href="#programacao_modal" title="Programa&ccedil;&atilde;o" data-toggle="modal">Programa&ccedil;&atilde;o Resumida</a></li>
          <li><a href="<?=BASE_URL?>/minicursos.php" title="">Minicursos</a></li>
-         <? /*<li><a href="" title="">Instru&ccedil;&otilde;es para Inscri&ccedil;&atilde;o</a></li>*/ ?>
+         <li><a href="">Instru&ccedil;&otilde;es Gerais</a></li>
          <li><a href="<?=BASE_URL?>/instrucoes_inscricao.php" title="" >Instru&ccedil;&otilde;es para Inscri&ccedil;&atilde;o</a></li>
          <li><a href="<?=BASE_URL?>/inscricoes.php" title="" >Formul&aacute;rio de Inscri&ccedil;&atilde;o</a></li>
          <li><a href="#cpf_modal" title="Comprovante de Inscri&ccedil;&atilde;o" data-toggle="modal">Comprovante de Inscri&ccedil;&atilde;o</a></li>
-         <li><a href="<?=BASE_URL?>/alojamento.php" title="Hoteis e Alojamento">Hot&eacute;is e Alojamento</a></li>
-         <li><a href="<?=BASE_URL?>/alimentacao.php" title="Alimenta&ccedil;&atilde;o">Alimenta&ccedil;&atilde;o</a></li>
+         <li><a href="<?=BASE_URL?>/local.php">Local</a></li>
          <li><a href="<?=BASE_URL?>/resumos.php">Resumos</a></li>
-       	<li><a href="<?=BASE_URL?>/noticias.php">NEWS</a></li>
-       	<li><a href="<?=BASE_URL?>/concurso.php">Concurso de Fotografia</a></li>
 		
 </div>
+</br>
 <div style="height: 25px;"></div>
 <a class="banner" href="https://www.facebook.com/XivEmabiUem?fref=ts" title="Visite nossa p&aacute;gina no Facebook!">
  <img src="img/banners/facebook-lateral.png"/>

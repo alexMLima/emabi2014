@@ -87,27 +87,27 @@
 	
 	$pdf->ln(5);
 	
-	$qry01 = mysql_query("SELECT id FROM c2013_inscricao WHERE confmaterial <> '0000-00-00 00:00:00'");
+	$qry01 = mysql_query("SELECT id FROM c2014_inscricao WHERE confmaterial <> '0000-00-00 00:00:00'");
 	$total01 = mysql_num_rows($qry01);	
 	$pdf->Cell(180,5,'Total de participantes que confirmaram recebimento do material: '.$total01,0,1);
 	
-	$qry02 = mysql_query("SELECT id FROM c2013_inscricao WHERE dia01 <> '0000-00-00 00:00:00'");
+	$qry02 = mysql_query("SELECT id FROM c2014_inscricao WHERE dia01 <> '0000-00-00 00:00:00'");
 	$total02 = mysql_num_rows($qry02);	
 	$pdf->Cell(180,5,'Total de participantes que confirmaram dia 29 de agosto: '.$total02,0,1);
 	
-	$qry03 = mysql_query("SELECT id FROM c2013_inscricao WHERE dia02 <> '0000-00-00 00:00:00'");
+	$qry03 = mysql_query("SELECT id FROM c2014_inscricao WHERE dia02 <> '0000-00-00 00:00:00'");
 	$total03 = mysql_num_rows($qry03);	
 	$pdf->Cell(180,5,'Total de participantes que confirmaram dia 30 de agosto: '.$total03,0,1);
 	
-	$qry04 = mysql_query("SELECT id FROM c2013_inscricao WHERE dia03 <> '0000-00-00 00:00:00'");
+	$qry04 = mysql_query("SELECT id FROM c2014_inscricao WHERE dia03 <> '0000-00-00 00:00:00'");
 	$total04 = mysql_num_rows($qry04);	
 	$pdf->Cell(180,5,'Total de participantes que confirmaram dia 31 de agosto: '.$total04,0,1);
 
-        $qry05 = mysql_query("SELECT id FROM c2013_inscricao WHERE dia04 <> '0000-00-00 00:00:00'");
+        $qry05 = mysql_query("SELECT id FROM c2014_inscricao WHERE dia04 <> '0000-00-00 00:00:00'");
 	$total05 = mysql_num_rows($qry05);
 	$pdf->Cell(180,5,'Total de participantes que confirmaram dia 01 de setembro: '.$total05,0,1);
 
-        $qry06 = mysql_query("SELECT id FROM c2013_inscricao WHERE dia05 <> '0000-00-00 00:00:00'");
+        $qry06 = mysql_query("SELECT id FROM c2014_inscricao WHERE dia05 <> '0000-00-00 00:00:00'");
 	$total06 = mysql_num_rows($qry06);
 	$pdf->Cell(180,5,'Total de participantes que confirmaram dia 02 de setembro: '.$total06,0,1);
 	

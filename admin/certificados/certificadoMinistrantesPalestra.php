@@ -14,9 +14,9 @@
 	$pdf->SetMargins(100,10,20);
 					
 	$sql = 'SELECT p . nome , of . titulo FROM '
-        . ' c2013_ministrantes as p '
-        . ' JOIN c2013_minicursos_ministrantes mm on (p.id = mm.id_ministrante) '
-        . ' JOIN c2013_palestras of on (of.id = mm.id_minicurso ) ';
+        . ' c2014_ministrantes as p '
+        . ' JOIN c2014_minicursos_ministrantes mm on (p.id = mm.id_ministrante) '
+        . ' JOIN c2014_palestras of on (of.id = mm.id_minicurso ) ';
         
 		
 	$qry = mysql_query($sql);

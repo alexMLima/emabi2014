@@ -4,7 +4,7 @@ class Estados{
 	}	
     
 	public function PesquisarPorId($id){
-		$query = "SELECT * FROM c2013_estados
+		$query = "SELECT * FROM c2014_estados
 						   WHERE id = '$id'";
 		$resultado = mysql_query($query) or die("Erro: ".mysql_error());
 		return $resultado;	

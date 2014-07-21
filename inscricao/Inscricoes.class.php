@@ -74,7 +74,7 @@ Class Inscricoes {
                 $dadosTrabalho = null;
             }
 
-            $query = "INSERT INTO c2013_inscricao (NOME,SEXO,EMPINST,EVENTO, TRABALHO, MINICURSO, RG,CPF,CATEGORIA,ENDERECOCOMPLETO,CEP,MUNICIPIO,TELEFONE,FAX,CELULAR,EMAIL,DATAINSCRICAO,CARGOCURSO,ALOJAMENTO,COMPROVANTE, TIPOMIME_COMPROVANTE, EXTENSAO_COMPROVANTE) VALUES ('$this->nome','$this->sexo','$this->empinst','$this->evento','$this->trabalho','$this->minicurso','$this->rg','$this->cpf','$this->categoria','$this->enderecocompleto','$this->cep','$this->municipio','$this->telefone','$this->fax','$this->celular','$this->email','$this->datainscricao','$this->cargocurso','$this->alojamento', '$dadosTrabalho', '$this->tipomime_comprovante','$this->extensao_comprovante')";
+            $query = "INSERT INTO c2014_inscricao (NOME,SEXO,EMPINST,EVENTO, TRABALHO, MINICURSO, RG,CPF,CATEGORIA,ENDERECOCOMPLETO,CEP,MUNICIPIO,TELEFONE,FAX,CELULAR,EMAIL,DATAINSCRICAO,CARGOCURSO,ALOJAMENTO,COMPROVANTE, TIPOMIME_COMPROVANTE, EXTENSAO_COMPROVANTE) VALUES ('$this->nome','$this->sexo','$this->empinst','$this->evento','$this->trabalho','$this->minicurso','$this->rg','$this->cpf','$this->categoria','$this->enderecocompleto','$this->cep','$this->municipio','$this->telefone','$this->fax','$this->celular','$this->email','$this->datainscricao','$this->cargocurso','$this->alojamento', '$dadosTrabalho', '$this->tipomime_comprovante','$this->extensao_comprovante')";
 
             mysql_query($query) or die("Erro: " . mysql_error());
 
@@ -147,7 +147,7 @@ Class Inscricoes {
 
 
 
-            $query = "UPDATE c2013_inscricao SET nome = '$this->nome',sexo = '$this->sexo',empinst = '$this->empinst',evento = '$this->evento',trabalho = '$this->trabalho',minicurso = '$this->minicurso',rg = '$this->rg',cpf = '$this->cpf',categoria = '$this->categoria', enderecocompleto = '$this->enderecocompleto',cep = '$this->cep',telefone = '$this->telefone',fax = '$this->fax',celular = '$this->celular',email = '$this->email', cargocurso = '$this->cargocurso', alojamento = '$this->alojamento'";
+            $query = "UPDATE c2014_inscricao SET nome = '$this->nome',sexo = '$this->sexo',empinst = '$this->empinst',evento = '$this->evento',trabalho = '$this->trabalho',minicurso = '$this->minicurso',rg = '$this->rg',cpf = '$this->cpf',categoria = '$this->categoria', enderecocompleto = '$this->enderecocompleto',cep = '$this->cep',telefone = '$this->telefone',fax = '$this->fax',celular = '$this->celular',email = '$this->email', cargocurso = '$this->cargocurso', alojamento = '$this->alojamento'";
 
             if ($Inscricao->GetMunicipio() != 0 && $Inscricao->GetMunicipio() != "") {
                 $query .= " ,municipio = '$this->municipio'";
@@ -174,61 +174,61 @@ Class Inscricoes {
     }
 
     public function excluir($id) {
-        $query = "DELETE FROM c2013_inscricao WHERE id = '$id'";
+        $query = "DELETE FROM c2014_inscricao WHERE id = '$id'";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function pesquisar($id) {
-        $query = "SELECT * FROM c2013_inscricao WHERE id = '$id'";
+        $query = "SELECT * FROM c2014_inscricao WHERE id = '$id'";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function pesquisarPorCpf($cpf) {
-        $query = "SELECT * FROM c2013_inscricao WHERE cpf = '$cpf'";
+        $query = "SELECT * FROM c2014_inscricao WHERE cpf = '$cpf'";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function pesquisarPorCpfdaLista($cpf) {
-        $query = "SELECT * FROM c2013_inscricao WHERE cpf = '$cpf' AND espera = 'N'";
+        $query = "SELECT * FROM c2014_inscricao WHERE cpf = '$cpf' AND espera = 'N'";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function ConsultaTabela() {
-        $query = "SELECT * FROM c2013_inscricao ORDER BY nome";
+        $query = "SELECT * FROM c2014_inscricao ORDER BY nome";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function ConsultaTabelaOrdenada($ordem) {
-        $query = "SELECT * FROM c2013_inscricao ORDER BY " . $ordem;
+        $query = "SELECT * FROM c2014_inscricao ORDER BY " . $ordem;
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function pesquisarPorMunicipio($mun) {
-        $query = "SELECT * FROM c2013_inscricao WHERE municipio = '$mun' order by municipio, nome";
+        $query = "SELECT * FROM c2014_inscricao WHERE municipio = '$mun' order by municipio, nome";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function pesquisarPorHotel($hotel) {
-        $query = "SELECT * FROM c2013_inscricao WHERE hotelconv = '$hotel' order by hotelconv, nome";
+        $query = "SELECT * FROM c2014_inscricao WHERE hotelconv = '$hotel' order by hotelconv, nome";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function pesquisarPorCategoria($cat) {
-        $query = "SELECT * FROM c2013_inscricao WHERE categoria = '$cat' order by categoria,nome";
+        $query = "SELECT * FROM c2014_inscricao WHERE categoria = '$cat' order by categoria,nome";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function AtualizarNumeroCrachas($id) {
-        $query = "UPDATE c2013_inscricao SET ncrachasimpressos = ncrachasimpressos + 1 WHERE id = '$id'";
+        $query = "UPDATE c2014_inscricao SET ncrachasimpressos = ncrachasimpressos + 1 WHERE id = '$id'";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
@@ -244,26 +244,26 @@ Class Inscricoes {
             $datapag = "0000-00-00 00:00:00";
 
         if ($op != "I") {
-            $query = "UPDATE c2013_inscricao SET pago = '$op', isento = 'N', datapagamento = '$datapag' WHERE id = '$id'";
+            $query = "UPDATE c2014_inscricao SET pago = '$op', isento = 'N', datapagamento = '$datapag' WHERE id = '$id'";
         }
         else
-            $query = "UPDATE c2013_inscricao SET isento = 'S', datapagamento = '$datapag' WHERE id = '$id'";
+            $query = "UPDATE c2014_inscricao SET isento = 'S', datapagamento = '$datapag' WHERE id = '$id'";
 
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function pesquisarInscricoesaPartirDaData($data) {
-        $query = "SELECT * FROM c2013_inscricao WHERE datainscricao >= '$data' order by nome";
+        $query = "SELECT * FROM c2014_inscricao WHERE datainscricao >= '$data' order by nome";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function pesquisarParticipantesdoMinicurso($id) {
         $query = "select p.id, p.nome, pm.data_entrada" .
-                "  FROM c2013_inscricao as p," .
-                "       c2013_participantes_minicursos as pm," .
-                "       c2013_minicursos as m" .
+                "  FROM c2014_inscricao as p," .
+                "       c2014_participantes_minicursos as pm," .
+                "       c2014_minicursos as m" .
                 " where m.id = $id" .
                 "   and p.id = pm.id_participante" .
                 "   and m.id = pm.id_minicurso order by p.nome";
@@ -273,40 +273,40 @@ Class Inscricoes {
     }
 
     public function pesquisarListadeEspera($sn) {
-        $query = "SELECT * FROM c2013_inscricao WHERE espera = '$sn' ORDER BY nome";
+        $query = "SELECT * FROM c2014_inscricao WHERE espera = '$sn' ORDER BY nome";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function pesquisarListadeEsperaOrderBy($sn, $orderBy) {
-        $query = "SELECT * FROM c2013_inscricao WHERE espera = '$sn' ORDER BY " . $orderBy;
+        $query = "SELECT * FROM c2014_inscricao WHERE espera = '$sn' ORDER BY " . $orderBy;
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function AtualizaListaEspera($sn, $id) {
-        $query = "UPDATE c2013_inscricao SET espera = '$sn' WHERE id = '$id'";
+        $query = "UPDATE c2014_inscricao SET espera = '$sn' WHERE id = '$id'";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function pesquisarParticipantesConfirmados() {
-        $query = "SELECT * FROM c2013_inscricao WHERE ncrachasimpressos > 0 ORDER BY nome";
+        $query = "SELECT * FROM c2014_inscricao WHERE ncrachasimpressos > 0 ORDER BY nome";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function pesquisarParticipantesForadoMinicurso($id) {
-        $query = "SELECT * FROM c2013_inscricao WHERE id NOT IN (select id_participante from c2013_participantes_minicursos where id_minicurso = $id) order by nome";
+        $query = "SELECT * FROM c2014_inscricao WHERE id NOT IN (select id_participante from c2014_participantes_minicursos where id_minicurso = $id) order by nome";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }
 
     public function pesquisarParticipantedoTrabalho($id) {
         $query = "select p.id, p.nome, p.email" .
-                "  FROM c2013_inscricao as p," .
-                "       c2013_participantes_trabalhos as pr," .
-                "       c2013_trabalhos as r" .
+                "  FROM c2014_inscricao as p," .
+                "       c2014_participantes_trabalhos as pr," .
+                "       c2014_trabalhos as r" .
                 " where r.id = $id" .
                 "   and p.id = pr.id_participante" .
                 "   and r.id = pr.id_trabalho";
@@ -324,7 +324,7 @@ Class Inscricoes {
         if ($origem == 'A' || $origem == 'I') {
             if ($origem == 'A') {
                 $id = $Inscricao->GetId();
-                $select = "SELECT ID, NOME FROM c2013_inscricao" .
+                $select = "SELECT ID, NOME FROM c2014_inscricao" .
                         " WHERE ID = '$id'";
                 $resultado = mysql_query($select) or die("Erro: " . mysql_error());
                 $total = mysql_num_rows($resultado);
@@ -334,7 +334,7 @@ Class Inscricoes {
                     $erro = 1;
                 }
             } else {
-                $select = "SELECT ID, NOME FROM c2013_inscricao" .
+                $select = "SELECT ID, NOME FROM c2014_inscricao" .
                         " WHERE cpf = '$cpf'";
                 $total = 0;
                 $resultado = mysql_query($select) or die("Erro: " . mysql_error());

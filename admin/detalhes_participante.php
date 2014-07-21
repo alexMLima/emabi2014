@@ -75,7 +75,7 @@
                                             <th>Categoria</th>
                                             <td>
                                                 <?
-                                                $dadosCategoria = mysql_fetch_array(mysql_query("SELECT descricao FROM c2013_categorias WHERE id = " . $dadosParticipante["categoria"]));
+                                                $dadosCategoria = mysql_fetch_array(mysql_query("SELECT descricao FROM c2014_categorias WHERE id = " . $dadosParticipante["categoria"]));
                                                 echo $dadosCategoria["descricao"];
 
                                                 if ($dadosParticipante["categoria"] >= 17){
@@ -118,7 +118,7 @@
                                     <th>Cidade</th>
                                     <td>
 <?
-                                        $dadosCidade = mysql_fetch_array(mysql_query("SELECT nome, id_uf FROM c2013_cidades WHERE id = " . $dadosParticipante["municipio"]));
+                                        $dadosCidade = mysql_fetch_array(mysql_query("SELECT nome, id_uf FROM c2014_cidades WHERE id = " . $dadosParticipante["municipio"]));
                                         echo $dadosCidade["nome"];
 ?>
                                     </td>
@@ -129,7 +129,7 @@
                                     <th>Estado</th>
                                     <td>
 <?
-                                        $dadosEstado = mysql_fetch_array(mysql_query("SELECT nome FROM c2013_estados WHERE id = " . $dadosCidade["id_uf"]));
+                                        $dadosEstado = mysql_fetch_array(mysql_query("SELECT nome FROM c2014_estados WHERE id = " . $dadosCidade["id_uf"]));
                                         echo $dadosEstado["nome"];
 ?>
                                     </td>

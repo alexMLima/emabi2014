@@ -32,7 +32,7 @@ if (mysql_num_rows($qryPart) > 0) {
                     exit();
               }
               else{
-                    mysql_query("UPDATE c2013_inscricao SET confmaterial = '$hoje' WHERE id = '$id'");
+                    mysql_query("UPDATE c2014_inscricao SET confmaterial = '$hoje' WHERE id = '$id'");
                     $msg = "Material entregue para ".$nomeCracha;
               }
               break;
@@ -45,7 +45,7 @@ if (mysql_num_rows($qryPart) > 0) {
                     exit();
               }
               else{
-                    mysql_query("UPDATE c2013_inscricao SET dia01 = '$hoje' WHERE id = '$id'");
+                    mysql_query("UPDATE c2014_inscricao SET dia01 = '$hoje' WHERE id = '$id'");
                     $msg = "Confirma��o para o dia 29 de agosto realizada para ".$nomeCracha;
               }
               break;
@@ -58,7 +58,7 @@ if (mysql_num_rows($qryPart) > 0) {
                     exit();
               }
               else{
-                    mysql_query("UPDATE c2013_inscricao SET dia02 = '$hoje' WHERE id = '$id'");
+                    mysql_query("UPDATE c2014_inscricao SET dia02 = '$hoje' WHERE id = '$id'");
                     $msg = "Confirma��o para o dia 30 de agosto realizada para ".$nomeCracha;
               }
               break;
@@ -71,7 +71,7 @@ if (mysql_num_rows($qryPart) > 0) {
                     exit();
               }
               else{
-                    mysql_query("UPDATE c2013_inscricao SET dia03 = '$hoje' WHERE id = '$id'");
+                    mysql_query("UPDATE c2014_inscricao SET dia03 = '$hoje' WHERE id = '$id'");
                     $msg = "Confirma��o para o dia 31 de agosto realizada para ".$nomeCracha;
               }
               break;
@@ -84,7 +84,7 @@ if (mysql_num_rows($qryPart) > 0) {
                     exit();
               }
               else{
-                    mysql_query("UPDATE c2013_inscricao SET dia04 = '$hoje' WHERE id = '$id'");
+                    mysql_query("UPDATE c2014_inscricao SET dia04 = '$hoje' WHERE id = '$id'");
                     $msg = "Confirma��o para o dia 01 de setembro realizada para ".$nomeCracha;
               }
               break;
@@ -97,7 +97,7 @@ if (mysql_num_rows($qryPart) > 0) {
                     exit();
               }
               else{
-                    mysql_query("UPDATE c2013_inscricao SET dia05 = '$hoje' WHERE id = '$id'");
+                    mysql_query("UPDATE c2014_inscricao SET dia05 = '$hoje' WHERE id = '$id'");
                     $msg = "Confirma��o para o dia 02 de setembro realizada para ".$nomeCracha;
               }
               break;

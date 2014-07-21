@@ -16,11 +16,11 @@
 	$id = $_GET['id'];		
 			
 	if ($id == 't'){
-	 $sql = "SELECT A.id, A.nome, A.pago FROM c2013_inscricao AS A WHERE (A.pago = 'S' or A.isento = 'S') ORDER BY A.nome";
+	 $sql = "SELECT A.id, A.nome, A.pago FROM c2014_inscricao AS A WHERE (A.pago = 'S' or A.isento = 'S') ORDER BY A.nome";
 	}	
 	else{
 	
-		$sql = "SELECT A.id, A.nome, A.pago FROM c2013_inscricao AS A WHERE A.id = $id ORDER BY A.nome";
+		$sql = "SELECT A.id, A.nome, A.pago FROM c2014_inscricao AS A WHERE A.id = $id ORDER BY A.nome";
 	
 	} 
 		

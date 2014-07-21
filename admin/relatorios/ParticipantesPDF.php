@@ -18,7 +18,7 @@
 	srand(microtime()*1000000);
 	
 	include "../../banco.php";
-	$sql = "SELECT id, nome FROM c2013_inscricao WHERE (pago = 'S') ORDER BY nome";
+	$sql = "SELECT id, nome FROM c2014_inscricao WHERE (pago = 'S') ORDER BY nome";
 			
 	$qry = mysql_query($sql);
 	$total = mysql_num_rows($qry);

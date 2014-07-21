@@ -13,7 +13,7 @@
 
 	$id = $_GET["id"];
 
-        $qryMc = mysql_query("SELECT * from c2013_palestras");
+        $qryMc = mysql_query("SELECT * from c2014_palestras");
 
 	$pdf=new PDF_MC_Table();
 	$pdf->AliasNbPages();
@@ -33,9 +33,9 @@
             srand(microtime()*1000000);
 
             $querystr = "select p.id, p.nome, pm.data_entrada" .
-                "  FROM c2013_inscricao as p," .
-                "       c2013_participantes_palestras as pm," .
-                "       c2013_palestras as m" .
+                "  FROM c2014_inscricao as p," .
+                "       c2014_participantes_palestras as pm," .
+                "       c2014_palestras as m" .
                 " where m.id = ".$dadosMc['id'].
                 "   and p.id = pm.id_participante" .
                 "   and m.id = pm.id_minicurso order by p.nome";

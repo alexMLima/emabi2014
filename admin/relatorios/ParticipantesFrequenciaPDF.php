@@ -18,7 +18,7 @@
 	srand(microtime()*1000000);
 	
 	include "../../banco.php";
-	$sql = "SELECT id, nome FROM c2013_inscricao WHERE (pago = 'S') ORDER BY nome";
+	$sql = "SELECT id, nome FROM c2014_inscricao WHERE (pago = 'S') ORDER BY nome";
 			
 	$qry = mysql_query($sql);
 	$total = mysql_num_rows($qry);
@@ -31,7 +31,7 @@
 			$part[1] = strtoupper($part[1]);
 			$part[1] = str_replace($minusculas, $maiusculas, $part[1]);		   
 
-                        $dadosPalestras = mysql_fetch_array(mysql_query("SELECT COUNT(1) qtd from c2013_participantes_palestras where id_participante = ".$part["id"]));
+                        $dadosPalestras = mysql_fetch_array(mysql_query("SELECT COUNT(1) qtd from c2014_participantes_palestras where id_participante = ".$part["id"]));
                         $porcentagem = ($dadosPalestras["qtd"] * 100) / 11;
                         $pdf->Row(array($i,$part[1],$dadosPalestras["qtd"]." de 11 (".number_format($porcentagem,2)."%)"));
 

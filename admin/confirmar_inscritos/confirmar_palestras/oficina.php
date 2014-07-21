@@ -41,7 +41,7 @@ else{
 	$palestra = $_GET["pal"];
 }
 
-$qryMinicursos = mysql_query("SELECT * from c2013_palestras WHERE id = '$palestra'");
+$qryMinicursos = mysql_query("SELECT * from c2014_palestras WHERE id = '$palestra'");
 $dados = mysql_fetch_array($qryMinicursos);
 
 ?>

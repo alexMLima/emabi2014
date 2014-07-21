@@ -20,16 +20,10 @@ include "includes/head.php";?>
                     	<div id="home" class="tab-pane fadein active">
                             <? include "pages/home.php";?>
                         </div>
-                        <div id="local" class="tab-pane fade">
-                            <? include "pages/local.php";?>
-                        </div>
-                        <? include "pages/programacao.php";?>
+                        <!-- include "pages/programacao.php";?>
                         <div id="instrucoes" class="tab-pane fade">
-                            <? include "pages/instrucoes.php";?>
-                        </div>
-                        <div id="ambiental" class="tab-pane fade">
-                            <? include "pages/socioambiental.php";?>
-                        </div>
+                            include "pages/instrucoes.php";?>
+                        </div>-->
                     </div>
                 </div>
             </div>
