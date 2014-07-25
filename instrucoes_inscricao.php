@@ -31,11 +31,8 @@ include "includes/head.php";
 
                                 <tr>
                                     <td>2 minicursos e palestras</td>
-                                    <td>80,00</td>
+                                    <td>50,00</td>
                                 </tr>
-                                <tr>
-                                    <td>3 minicursos e palestras</td>
-                                    <td>100,00</td>
                                 </tr>
                             </table>                                    
                             <div>
@@ -50,7 +47,7 @@ include "includes/head.php";
                             </div>
 
                             <div class="alert alert-error">
-                                <p><h4>ATEN&Ccedil;&Atilde;O</h4> A sele&ccedil;&atilde;o dos minicursos s&oacute; poder&aacute; ser feita AP&Oacute;s CONFIRMA&Ccedil;&Atilde;O DO PAGAMENTO. Para selecionar o(s) mini-curso(s), o participante dever&aacute; acessar a op&ccedil;&atilde;o "Editar Inscri&ccedil;&atilde;o", digitar seu CPF e ent&atilde;o selecionar o(s) mini-curso(s). Se mesmo ap&oacute;s o pagamento, os minicursos n&atilde;o aparecerem para sele&ccedil;&atilde;o nesta op&ccedil;&atilde;o, favor entrar em contato com a organiza&ccedil;&atilde;o do evento (Secretaria do DBI).</p>
+                                <p><h4>ATEN&Ccedil;&Atilde;O</h4> A sele&ccedil;&atilde;o dos minicursos s&oacute; poder&aacute; ser feita AP&Oacute;S CONFIRMA&Ccedil;&Atilde;O DO PAGAMENTO. Para selecionar o(s) mini-curso(s), o participante dever&aacute; acessar a op&ccedil;&atilde;o "Editar Inscri&ccedil;&atilde;o", digitar seu CPF e ent&atilde;o selecionar o(s) mini-curso(s). Se mesmo ap&oacute;s o pagamento, os minicursos n&atilde;o aparecerem para sele&ccedil;&atilde;o nesta op&ccedil;&atilde;o, favor entrar em contato com a organiza&ccedil;&atilde;o do evento (Secretaria do DBI).</p>
                             </div>
                             
                             

@@ -33,7 +33,7 @@ include "includes/head.php";
                                 Expandidos e Apresenta&ccedil;&atilde;o de Trabalhos Cient&iacute;ficos.</h3>
                             
                                 <p>
-                                    Durante o 14º Encontro Maringaense de Biologia (EMABI) e 
+                                    Durante o 15º Encontro Maringaense de Biologia (EMABI) e 
                                     a 28ª Semana de Biologia, os resumos serão apresentados em formato de pôster, 
                                     observando as seguintes informações gerais:
                                 </p>
@@ -52,11 +52,24 @@ include "includes/head.php";
                             </div>
                             <p>
                                 Os resumos (simples ou expandidos) de trabalhos científicos deverão ser enviados
-                                SOMENTE eletronicamente para o e-mail: <b>resumos.emabi2013@gmail.com</b>,
+                                SOMENTE eletronicamente para o e-mail: <b>resumo.emabi2014@gmail.com</b>,
                                 impreterivelmente até o dia 18 de agosto de 2014.
                             </p>
-                            
-                            <p><a href="http://www.dbi.uem.br/emabi2014/resumos-norma.pdf" title="Resumos">CLIQUE AQUI PARA VISUALIZAR AS NORMAS</a></li></p>
+                            <p><b>NORMAS PARA SUBMISSÃO DE RESUMOS ONLINE</b></p>
+                            <ul>
+<li>O texto do resumo deverá seguir as seguintes normas de formatação:</li>
+<li>Os resumos deverão ser redigidos em português, inglês ou espanhol, no Microsoft Word (fonte Times News Roman, tamanho 12, espaçamento 1,5, e com todas as margens ajustadas em 2,5 cm).</li> 
+<li>Deve ser em parágrafo único e conter até 2500 caracteres (incluindo espaços).</li> 
+<li>Resumos com número maior que 2500 caracteres não serão aceitos.</li>
+<li>Título: deve ser informativo e escrito em letra maiúscula e em negrito, centralizado.</li>
+<li>Nome dos autores sem abreviação; nome e endereço das instituições; e-mail para correspondência.</li>
+<li>O texto deve conter introdução, metodologia, resultados e conclusões - Fontes financiadoras ou de Apoio (opcionais).</li>
+<li>Projetos de pesquisa não serão aceitos.</li>
+<li>Tabelas, gráficos, citações ou referências bibliográficas, não deverão constar no texto.</li>
+<li>Modelo de resumo simples: ver <a href="http://www.dbi.uem.br/emabi2014/ModeloResumo.pdf" title="Resumos">ANEXO 1 MODELO DE RESUMO</a></li>
+                            </ul>
+                           
+                           
                             <p>Poderão ser submetidos trabalhos científicos nas seguintes áreas:</p>
                             <ul>
                                 <li>Celular e Genética </li>
@@ -70,6 +83,7 @@ include "includes/head.php";
                                 </li>Zoologia</li>
                                 <li>Áreas Afins</li>
                             </ul>
+                            
                         </div>
                     </div>
                 </div>
