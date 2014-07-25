@@ -39,7 +39,7 @@ position: absolute;"
                     </tr>
                     <tr>
                         <td >
-                            09/08
+                            05/08
                         </td>
                         <td>
                             Abertura das inscrições
@@ -51,13 +51,13 @@ position: absolute;"
                             18/08
                         </td>
                         <td>
-                            Envio de Resumos
+                            Data Limite para envio de resumos
                         </td>
                         
                     </tr>
                     <tr>
                         <td >
-                            24/08
+                            A definir
                         </td>
                         <td>
                             Fechamento das Incrições

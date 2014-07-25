@@ -6,13 +6,13 @@
          <? /*<li><a href="" title="">Instru&ccedil;&otilde;es para Inscri&ccedil;&atilde;o</a></li>*/ ?>
          <li><a href="<?=BASE_URL?>/instrucoes_inscricao.php" title="" >Instru&ccedil;&otilde;es para Inscri&ccedil;&atilde;o</a></li>
          <li><a href="<?=BASE_URL?>/inscricoes.php" title="" >Formul&aacute;rio de Inscri&ccedil;&atilde;o</a></li>
-         <li><a href="#cpf_modal" title="Comprovante de Inscri&ccedil;&atilde;o" data-toggle="modal">Comprovante de Inscri&ccedil;&atilde;o</a></li>
+         <li><a href="#cpf_modal" title="Editar Inscri&ccedil;&atilde;o" data-toggle="modal">Editar Inscri&ccedil;&atilde;o</a></li>
          <li><a href="<?=BASE_URL?>/alojamento.php" title="Hoteis e Alojamento">Hot&eacute;is e Alojamento</a></li>
          <li><a href="<?=BASE_URL?>/alimentacao.php" title="Alimenta&ccedil;&atilde;o">Alimenta&ccedil;&atilde;o</a></li>
          <li><a href="<?=BASE_URL?>/resumos.php">Resumos</a></li>
 </div>
 <div style="height: 25px;"></div>
-<a class="banner" href="https://www.facebook.com/XivEmabiUem?fref=ts" title="Visite nossa p&aacute;gina no Facebook!">
+<a class="banner" href="https://www.facebook.com/pages/Emabi2014/1430390730582949?ref=hl" title="Visite nossa p&aacute;gina no Facebook!">
  <img src="img/banners/facebook-lateral.png"/>
 </a>
 <div style="height: 25px;"></div>

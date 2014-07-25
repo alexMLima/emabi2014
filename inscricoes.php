@@ -1,5 +1,5 @@
 <?
-
+exit('Inscri&ccedil;&otilde;es ainda n&atilde;o est&atilde;o abertas. ');
 include_once 'banco.php';	
 include_once 'inscricao/Inscricao.class.php';
 include_once 'inscricao/Inscricoes.class.php';

@@ -15,7 +15,7 @@
 </div>
 </br>
 <div style="height: 25px;"></div>
-<a class="banner" href="https://www.facebook.com/XivEmabiUem?fref=ts" title="Visite nossa p&aacute;gina no Facebook!">
+<a class="banner" href="https://www.facebook.com/pages/Emabi2014/1430390730582949" title="Visite nossa p&aacute;gina no Facebook!">
  <img src="img/banners/facebook-lateral.png"/>
 </a>
 <div style="height: 25px;"></div>

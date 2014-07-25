@@ -5,7 +5,7 @@
                 <div class="logo">
                     <a href="/"></a>
                 </div>
-                <a class="contact" href="mailto:icgrodrigues@uem.br?body=Sua mensagem aqui!"><span class="icon-mail no-bg"></span>contato</a>
+                <a class="contact" href="mailto:contato.emabi2014@gmail.com?body=Sua mensagem aqui!"><span class="icon-mail no-bg"></span>contato</a>
             </div>
         </div>
     </div>
