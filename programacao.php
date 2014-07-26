@@ -198,23 +198,23 @@ include "includes/head.php";
                                     <td>Coffee</td>
                                 </tr>
                                 <tr>
-                                    <td >13:00 - 12:00</td>
+                                    <td >10:30 - 12:00</td>
                                     <td>Minicurso Grupo 1</td>
                                 </tr>
                                 <tr>
-                                    <td >12:00 - 14:00</td>
+                                    <td >12:00 - 13:30</td>
                                     <td>Almoço</td>
                                 </tr>
                                 <tr>
-                                    <td >14:00 - 16:00</td>
+                                    <td >13:30 - 15:30</td>
                                     <td>Minicurso Grupo 2</td>
                                 </tr>
                                 <tr>
-                                    <td>16:00 - 16:30</td>
+                                    <td>15:30 - 16:00</td>
                                     <td>Coffee</td>
                                 </tr>
                                 <tr>
-                                    <td >16:30 - 18:00</td>
+                                    <td >16:00 - 17:30</td>
                                     <td>Minicurso Grupo 2</td>
                                 </tr>
                                 <tr>
@@ -247,23 +247,23 @@ include "includes/head.php";
                                     <td>Coffee</td>
                                 </tr>
                                 <tr>
-                                    <td >13:00 - 12:00</td>
+                                    <td >10:30 - 12:00</td>
                                     <td>Minicurso Grupo 1</td>
                                 </tr>
                                 <tr>
-                                    <td >12:00 - 14:00</td>
+                                    <td >12:00 - 13:30</td>
                                     <td>Almoço</td>
                                 </tr>
                                 <tr>
-                                    <td >14:00 - 16:00</td>
+                                    <td >13:30 - 15:30</td>
                                     <td>Minicurso Grupo 2</td>
                                 </tr>
                                 <tr>
-                                    <td>16:00 - 16:30</td>
+                                    <td>15:30 - 16:00</td>
                                     <td>Coffee</td>
                                 </tr>
                                 <tr>
-                                    <td >16:30 - 18:00</td>
+                                    <td >16:00 - 17:30</td>
                                     <td>Minicurso Grupo 2</td>
                                 </tr>
                                 <tr>
