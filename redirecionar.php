@@ -1,13 +1,18 @@
-
-
 <?
 include_once 'banco.php';	
-include_once 'inscricao/Inscricoes.class.php';
+include_once 'Inscricoes.class.php';
 @session_start();
 @session_register("idedit");					
 
 $_SESSION["idedit"] = "";
 $cpf = mysql_real_escape_string($_POST["tbCpf"]);
+//$cpf = mysql_real_escape_string($_GET["tbCpf"]);
+$cpf = trim($cpf);     
+$cpf = str_replace(".", "", $cpf);
+$cpf = str_replace(",", "", $cpf);
+$cpf = str_replace("-", "", $cpf);
+$cpf = str_replace("/", "", $cpf);
+
 $cod = $_GET["cod"];
 $objParticipantes = new Inscricoes;
 $qryPart = $objParticipantes->pesquisarPorCpf($cpf);
@@ -46,9 +51,9 @@ if (mysql_num_rows($qryPart) > 0) {
 }
 else{
 	echo "<script>";
-	echo "javascript:alert('CPF n�o encontrado!');  void 0";
+	echo "javascript:alert('CPF nao encontrado!');  void 0";
 	echo "</script>";
-	echo "<meta http-equiv=\"REFRESH\" content=\"0; url=http://emabi.localhost/\">";
+	echo "<meta http-equiv=\"REFRESH\" content=\"0; url=index.php\">";
 	exit();
 }
 		

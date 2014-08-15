@@ -1,5 +1,5 @@
 <?
-//header('Content-Type: text/html; charset=utf-8');
+header('Content-Type: text/html; charset=utf-8');
 //exit('Inscri&ccedil;&otilde;es ainda n&atilde;o est&atilde;o abertas. ');
 include_once 'banco.php';	
 include_once 'inscricao/Inscricao.class.php';
@@ -97,7 +97,7 @@ if( isset( $_GET['cod'] ) && !empty($_GET['cod']) ){
 			&& $aluno->GetDatapagamento() !== ''
 				&& !is_null( $aluno->GetDatapagamento() ) ){
 			*/
-		if( $aluno->GetPago() == 'S' || $aluno->GetIsento() == 'S'){
+		if( $aluno->GetPago() == 'S' || $aluno->GetIsento == 'S'){
 			if( $action == 'upd' ){
 				$my_cursos = $cursos->PesquisarMinicursosdoParticipante($_GET['cod']);
 				$my = array();
@@ -131,7 +131,6 @@ if( isset( $_GET['cod'] ) && !empty($_GET['cod']) ){
 			$not_payed = true;
 		}
 		$comprovante_url = BASE_URL.'/comprovante.php?cod='.$aluno->getId();
-                $boleto_url =  BASE_URL.'/boleto/boleto_itau.php?cod='.$aluno->getId();
 	}
 } else {
 	if( isset( $_GET['cod'] ) && empty($_GET['cod']) && empty( $mensagem ) ){
@@ -240,7 +239,7 @@ include "includes/head.php";
                                         <ul class="to_select">
                                             <? foreach( $minicursos as $curso ){ ?>
                                             <li data-id="<?=$curso['id']?>">
-                                                <?=$curso['titulo']?>
+                                                <?=utf8_encode($curso['titulo'])?>
                                                 <strong><?=$curso['diasemana']?>  /  <span><?=utf8_encode($curso['horario'])?></span></strong>
                                             </li>
                                             <? } ?>
@@ -255,7 +254,7 @@ include "includes/head.php";
                                         <? if( count( $my ) > 0 ){ ?>
                                             <? foreach( $my as $curso ){ ?>
                                             <li data-id="<?=$curso['id']?>">
-                                                <?=$curso['titulo']?>
+                                                <?=utf8_encode($curso['titulo'])?>
                                                 <strong><?=$curso['diasemana']?>  /  <span><?=utf8_encode($curso['horario'])?></span></strong>
                                             </li>
                                             <? } ?>
@@ -266,11 +265,10 @@ include "includes/head.php";
                                     </div>
                                 <? } ?>
                                 <br/><br/>
-                                <?//var_dump($aluno); exit()?>
                                 <div class="control-group">
                                     <label class="control-label">Nome*</label>
                                     <div class="controls">
-                                      <input type="text" name="nome" size="30" value="<?=utf8_decode(setValue( $aluno, 'nome' ))?>" />
+                                      <input type="text" name="nome" size="30" value="<?=setValue( $aluno, 'nome' )?>" />
                                     </div>
                                 </div>
                                 
@@ -314,14 +312,14 @@ include "includes/head.php";
                                 <div class="control-group">
                                     <label class="control-label">Empresa/Institui&ccedil;&atilde;o*</label>
                                     <div class="controls">
-                                        <input type="text" name="empinst" size="30"  value="<?=utf8_decode(setValue( $aluno, 'empinst' ))?>"  />
+                                        <input type="text" name="empinst" size="30"  value="<?=setValue( $aluno, 'empinst' )?>"  />
                                     </div>
                                 </div>
                                 
                                 <div class="control-group">
                                     <label class="control-label">Cargo/Curso</label>
                                     <div class="controls">
-                                        <input type="text" name="cargoCurso" size="30"  value="<?=utf8_decode(setValue( $aluno, 'cargocurso' ))?>"  />
+                                        <input type="text" name="cargoCurso" size="30"  value="<?=setValue( $aluno, 'cargocurso' )?>"  />
                                     </div>
                                 </div>
                                 
@@ -336,7 +334,7 @@ include "includes/head.php";
                                 <div class="control-group">
                                     <label class="control-label">Endere&ccedil;o Completo*</label>
                                     <div class="controls">
-                                        <input type="text" name="enderecocompleto" size="30" value="<?=utf8_decode(setValue( $aluno, 'enderecocompleto' ))?>" />
+                                        <input type="text" name="enderecocompleto" size="30" value="<?=setValue( $aluno, 'enderecocompleto' )?>" />
                                     </div>
                                 </div>
                                 
@@ -402,7 +400,6 @@ include "includes/head.php";
                         	<h3>Opções</h3>
                             <ul>
                             	<li><a href="<?=$comprovante_url?>" title="">Comprovante de inscrição</a></li>
-                                <li><a href="<?=$boleto_url?>" title="">Emitir 2ª via Boleto bancário</a></li>
                             </ul>
                             <? } ?>
                         	<? /*

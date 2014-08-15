@@ -34,9 +34,9 @@ Class Inscricoes {
     }
 
     public function incluir($Inscricao) {
-
+        
         $retorno = $this->validar($Inscricao, 'I');
-
+        
         if ($retorno == 'OK') {
             $this->nome = $Inscricao->GetNome();
             $this->sexo = $Inscricao->GetSexo();
@@ -139,7 +139,8 @@ Class Inscricoes {
             $this->comprovante = $Inscricao->GetComprovante();
             $this->tipomime_comprovante = $this->comprovante["type"];
             $this->extensao_comprovante = strrchr($this->comprovante["name"], ".");
-
+            
+            
             if ($this->tipomime_comprovante != "") {
                 $pontTrabalho = fopen($this->comprovante["tmp_name"], "r");
                 $dadosTrabalho = addslashes(fread($pontTrabalho, 5242880));
@@ -186,7 +187,7 @@ Class Inscricoes {
     }
 
     public function pesquisarPorCpf($cpf) {
-        $query = "SELECT * FROM c2014_inscricao WHERE cpf = '$cpf'";
+        $query = "SELECT * FROM c2014_inscricao WHERE cpf = $cpf";
         $resultado = mysql_query($query) or die("Erro: " . mysql_error());
         return $resultado;
     }

@@ -1,11 +1,13 @@
 <?
+
 if (file_exists('scripts/init.php')) {
 	require_once 'scripts/init.php';
 } else {
-	exit('N�o foi poss�vel encontrar o arquivo de inicializa��o');
+	exit('Não foi possível encontrar o arquivo de inicialização');
 }
 include "includes/head.php";?>
 <body>
+
 	<? include "includes/header.php";?>
     <? include "includes/banner.php";?>
     <? include "includes/menu_topo.php";?>

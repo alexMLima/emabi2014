@@ -52,7 +52,7 @@ Class Inscricao {
     }
 
     public function SetNome($nome) {
-        $this->nome = $this->remove_accents($nome);
+        $this->nome = $nome;
     }
 
     public function GetSexo() {
@@ -114,18 +114,8 @@ Class Inscricao {
         $valor = str_replace("-", "", $valor);
         $valor = str_replace("/", "", $valor);
    
-        $cpf = '';
-        for ($i = 0; $i < strlen($valor); $i++) {
-            if ($i == 3 || $i == 6){
-                $cpf = $cpf.'.';
-            }
-            if ($i == 9){
-                $cpf = $cpf.'-';
-            }
-            $cpf = $cpf.$valor[$j];
-            $j++;
-        }
-        $this->cpf = $cpf;
+     
+        $this->cpf = $valor;
     }
 
     public function GetEstado() {
@@ -133,7 +123,7 @@ Class Inscricao {
     }
 
     public function SetEstado($estado) {
-        $this->uf = $estado;
+        $this->uf = utf8_decode($estado);
     }
 
     public function GetCategoria() {
@@ -141,7 +131,7 @@ Class Inscricao {
     }
 
     public function SetCategoria($categoria) {
-        $this->categoria = $categoria;
+        $this->categoria = utf8_decode($categoria);
     }
 
     public function GetEnderecocompleto() {
@@ -149,7 +139,7 @@ Class Inscricao {
     }
 
     public function SetEnderecocompleto($enderecocompleto) {
-        $this->enderecocompleto = $this->remove_accents($enderecocompleto);
+        $this->enderecocompleto = $enderecocompleto;
     }
 
     public function GetCep() {
@@ -165,7 +155,7 @@ Class Inscricao {
     }
 
     public function SetMunicipio($municipio) {
-        $this->municipio = $municipio;
+        $this->municipio = utf8_decode($municipio);
     }
 
     public function GetUf() {

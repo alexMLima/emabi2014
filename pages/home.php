@@ -1,14 +1,14 @@
 <div style="width: 425px;">
-<p>Seja bem-vindo ao 14º Encontro Maringaense de Biologia (EMABI)
+<p>Seja bem-vindo ao 15º Encontro Maringaense de Biologia (EMABI)
 e à 28ª Semana de Biologia da Universidade Estadual de Maringá,
 que serão realizados entre os dias 01 a 05 de Setembro de 2014.</p>
 
-<p>Esse ano o tema dos eventos é <b>“BIODIVERSIDADE EM FOCO”</b> e
+<p>Esse ano o tema do evento é <b>“BIODIVERSIDADE EM FOCO”</b> e
 tem como objetivo principal propiciar a discussão e divulgação de
 trabalhos científicos relacionados à preservação e conservação da
 biodiversidade brasileira.</p>
 
-<p>Os eventos contarão com a participação de estudantes de graduação,
+<p>O evento contará com a participação de estudantes de graduação,
 pós-graduação, professores, pesquisadores, técnicos e outros
 profissionais das áreas de ciências biológicas, ciências agrárias
 e áreas afins. Durante a semana serão realizadas palestras, mini cursos, 
@@ -39,10 +39,10 @@ position: absolute;"
                     </tr>
                     <tr>
                         <td >
-                            05/08
+                            04/08
                         </td>
                         <td>
-                            Abertura das inscrições
+                            EMABI-Abertura das inscrições
                         </td>
                         
                     </tr>
@@ -51,16 +51,16 @@ position: absolute;"
                             18/08
                         </td>
                         <td>
-                            Data Limite para envio de resumos
+                            EMABI-Limite para envio de resumos
                         </td>
                         
                     </tr>
                     <tr>
                         <td >
-                            A definir
+                            01/09
                         </td>
                         <td>
-                            Fechamento das Incrições
+                            EMABI-Fechamento das inscrições
                         </td>
                     </tr>
                     <tr>
@@ -68,7 +68,7 @@ position: absolute;"
                             01/09
                         </td>
                         <td>
-                            Abertura do Emabi
+                            EMABI-Abertura
                         </td>
                     </tr>
                     <tr>
@@ -76,7 +76,7 @@ position: absolute;"
                             05/09
                         </td>
                         <td>
-                            Encerramento do Emabi
+                            EMABI-Encerramento
                         </td>
                     </tr>
                 </table>

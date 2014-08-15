@@ -2,7 +2,7 @@
 if (file_exists('scripts/init.php')) {
 	require_once 'scripts/init.php';
 } else {
-	exit('N�o foi poss�vel encontrar o arquivo de inicializa��o');
+	exit('Não foi possivel encontrar o arquivo de inicialização');
 }
 include "includes/head.php";
 ?>
@@ -47,8 +47,9 @@ include "includes/head.php";
 
 										$objParticipantes = new Inscricoes;
 										$qryPart = $objParticipantes -> pesquisar($id);
-										$dadosParticipante = mysql_fetch_array($qryPart);
+                                                                                mysql_query("SET NAMES 'utf8'");
 
+										$dadosParticipante = mysql_fetch_array($qryPart);
 										$objMinicursos = new Minicursos;
 										$minicursos = $objMinicursos -> PesquisarMinicursosdoParticipante($id);
                                         ?>
@@ -83,7 +84,7 @@ include "includes/head.php";
                                             <td><? echo $dadosParticipante["rg"]; ?></td>
                                         </tr>
                                         <tr>
-                                            <th>Endere�o</th>
+                                            <th>Endereço</th>
                                             <td><? echo $dadosParticipante["enderecocompleto"]; ?></td>
                                         </tr>
                                         <tr>
@@ -157,17 +158,13 @@ include "includes/head.php";
                                         	<td>
 		                            			
                                         		<?php
-												echo "<a href='" . htmlspecialchars("http://www.dbi.uem.br/emabi2013/boleto/boleto_caixa_teste.php?cod=" . urlencode($id)) . "'>\n";
-													?> Clique aqui para emitir o Boleto Banc&aacute;rio no EMABI 2013</a>
+                                                        
+												echo "<a href='" . htmlspecialchars(BASE_URL."/boleto/boleto_itau.php?cod=" . urlencode($id)) . "'>\n";
+   													?> Clique aqui para emitir o Boleto Banc&aacute;rio no EMABI 2014</a>
                                         	</td>
                                         </tr>
                                     </table>
                                     </p>
-                                     <p>
-                                     	<?php
-										echo "<a href='" . htmlspecialchars("emabi2013/boleto/boleto_caixa_teste.php?cod=" . urlencode($id)) . "'>\n";
-													?>
-		                        	</p>
                                 </div>
                             </div>                            
                             <div style="clear: both;">&nbsp;</div>

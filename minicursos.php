@@ -1,4 +1,6 @@
 <?
+header('Content-Type: text/html; charset=utf-8');
+
 if (file_exists('scripts/init.php')) {
 	require_once 'scripts/init.php';
 } else {
@@ -35,8 +37,8 @@ include "includes/head.php";
 						$objMinistrantes = new Ministrantes;
                         ?>
                         <div style="clear: both;">&nbsp;</div>
-                        <h3>Baixe a lista de minicursos</h3>
-                        <p><a href="">Lista de minicursos</a>
+<!--                        <h3>Baixe a lista de minicursos</h3>
+                        <p><a href="">Lista de minicursos</a>-->
                         <?
                             $i = 1;
                             while ($i <= 3) {
@@ -48,7 +50,7 @@ include "includes/head.php";
                                     echo "<p><h3>Grupo 1 - 04/09 e 05/09 MANHÃ - 08:00 as 12:00</h3></p>";
                                     break;
                                 case "2":
-                                    echo "<p><h3>Grupo 2 - 04/09 e 05/09 TARDE - 13:00 as 17:30</h3></p>";
+                                    echo "<p><h3>Grupo 2 - 04/09 e 05/09 TARDE - 13:30 as 17:30</h3></p>";
                                     break;
                                 case "3":
                                     echo "<p><h3>Grupo 3 - 04/09 e 05/09 NOITE - 19:00 as 23:00</h3></p>";
@@ -74,7 +76,7 @@ include "includes/head.php";
                                 <table class="table table-bordered">
                                     <tr>
                                         <th width="99">Minicurso</th>
-                                        <td width="347"><? echo $minicurso["nminicurso"] . " - " . htmlentities($minicurso["titulo"]); ?></td>
+                                        <td width="347"><? echo $minicurso["nminicurso"] . " - " . $minicurso["titulo"]; ?></td>
                                     </tr>
                                 <? if ($minicurso["observacao"] != "") {
                                 ?>
@@ -85,7 +87,7 @@ include "includes/head.php";
                                 <? } ?>
                                 <tr>
                                     <th>Ministrante(s)</th>
-                                    <td><? echo utf8_encode($nomeMinistrantes); ?></td>
+                                    <td><? echo $nomeMinistrantes; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Total de Vagas</th>

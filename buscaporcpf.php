@@ -2,14 +2,14 @@
 <div id="cpf_modal" data-width="450" class="cpf_modal modal hide fade form top" tabindex="-1" role="dialog" aria-labelledby="BuscaPorCpf" aria-hidden="true">
 	<form method="post" class="form form-horizontal" action="redirecionar.php?cod=3" name="buscar" />
     	<div class="modal-header">
-    	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">ï¿½</button>
+    	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
             <h3>Alterar Dados da Inscrição</h3>
         </div>
         <div class="modal-body">
         	<div class="control-group">
-                <label class="control-label">Informe seu cpf:</label>
+                <label class="control-label">CPF:(somente numeros)</label>
                 <div class="controls">
-                <input type="text" name="tbCpf" id="cpf" size="30" onKeyUp="mascaraHellas(this.value, this.id, '###.###.###-##', event)" />&nbsp;
+                <input type="text" name="tbCpf" id="cpf" size="30" />&nbsp;
                 </div>
     		</div>
         </div>
@@ -22,12 +22,12 @@
 <div id="cpf_modal1" data-width="450" class="cpf_modal modal hide fade form top" tabindex="-1" role="dialog" aria-labelledby="BuscaPorCpf" aria-hidden="true">
 	<form method="post" class="form form-horizontal" action="redirecionar.php?cod=1" name="buscar" />
     	<div class="modal-header">
-    	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">ï¿½</button>
+    	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
             <h3>Alterar Dados da Inscri&ccedil;&atilde;o</h3>
         </div>
         <div class="modal-body">
         	<div class="control-group">
-                <label class="control-label">Informe seu cpf:</label>
+                <label class="control-label">CPF:(somente numeros</label>
                 <div class="controls">
                 <input type="text" name="tbCpf" id="cpf" size="30" onKeyUp="mascaraHellas(this.value, this.id, '###.###.###-##', event)" />&nbsp;
                 </div>

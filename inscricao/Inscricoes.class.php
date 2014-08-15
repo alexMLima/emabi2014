@@ -34,9 +34,7 @@ Class Inscricoes {
     }
 
     public function incluir($Inscricao) {
-
-        $retorno = $this->validar($Inscricao, 'I');
-
+       $retorno = $this->validar($Inscricao, 'I');
         if ($retorno == 'OK') {
             $this->nome = $Inscricao->GetNome();
             $this->sexo = $Inscricao->GetSexo();
@@ -73,7 +71,7 @@ Class Inscricoes {
             } else {
                 $dadosTrabalho = null;
             }
-
+            
             $query = "INSERT INTO c2014_inscricao (NOME,SEXO,EMPINST,EVENTO, TRABALHO, MINICURSO, RG,CPF,CATEGORIA,ENDERECOCOMPLETO,CEP,MUNICIPIO,TELEFONE,FAX,CELULAR,EMAIL,DATAINSCRICAO,CARGOCURSO,ALOJAMENTO,COMPROVANTE, TIPOMIME_COMPROVANTE, EXTENSAO_COMPROVANTE) VALUES ('$this->nome','$this->sexo','$this->empinst','$this->evento','$this->trabalho','$this->minicurso','$this->rg','$this->cpf','$this->categoria','$this->enderecocompleto','$this->cep','$this->municipio','$this->telefone','$this->fax','$this->celular','$this->email','$this->datainscricao','$this->cargocurso','$this->alojamento', '$dadosTrabalho', '$this->tipomime_comprovante','$this->extensao_comprovante')";
 
             mysql_query($query) or die("Erro: " . mysql_error());

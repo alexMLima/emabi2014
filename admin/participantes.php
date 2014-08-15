@@ -1,4 +1,7 @@
-<? include 'seguranca.php'; ?>
+<? include 'seguranca.php'; 
+header('Content-Type: text/html; charset=utf-8');
+
+?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -81,7 +84,7 @@
 
                         <p align="justify">
 
-                            <img src="images/pdf2.gif" /><a href="relatorios/ParticipantesFrequenciaPDF.php" target="_blank">Emitir Listagem de Participantes (Frequência nas Palestras)</a><br />
+                            <img src="images/pdf2.gif" /><a href="relatorios/ParticipantesFrequenciaPDF.php" target="_blank">Emitir Listagem de Participantes (FrequÃªncia nas Palestras)</a><br />
 
                         </p>
                         
@@ -95,17 +98,17 @@
                         } ?> >Nome</option>
                                     <option value="datainscricao" <? if ($order == "datainscricao") {
                             echo 'selected="selected"';
-                        } ?>>Data de Inscrição (Crescente)</option>
+                        } ?>>Data de InscriÃ§Ã£o (Crescente)</option>
                                     <option value="datainscricao desc" <? if ($order == "datainscricao desc") {
                             echo 'selected="selected"';
-                        } ?>>Data de Inscrição (Decrescente)</option>
+                        } ?>>Data de InscriÃ§Ã£o (Decrescente)</option>
                                 </select>
                                 &nbsp;&nbsp;
                                 <input type="submit" value="OK" />
                             </form>
 
                             <p align="justify">
-                                <b>Obs: Os nomes em vermelho indicam os participantes que não efetuaram pagamento em até 5 dias desde a data da inscrição.</b>	               </p>
+                                <b>Obs: Os nomes em vermelho indicam os participantes que nÃ£o efetuaram pagamento em atÃ© 5 dias desde a data da inscriÃ§Ã£o.</b>	               </p>
 
                             <table width="525" border="1" bordercolor="#CCCCCC">
 
@@ -114,9 +117,9 @@
                                     <th width="37" align="center">Cod.</th>
                                     <th width="124" align="center">Nome</th>
                                     <th width="45" align="center">CPF</th>
-                                    <th width="77" align="center">Inscrição</th>
+                                    <th width="77" align="center">InscriÃ§Ã£o</th>
                                     <th width="57" align="center">Pago</th>
-                                    <th width="145" align="center">Operações</th>
+                                    <th width="145" align="center">OperaÃ§Ãµes</th>
                                 </tr>
 
                                 <? while ($dadosPart = mysql_fetch_array($queryPart)) {
@@ -157,18 +160,18 @@
                                                 if ($dadosPart["isento"] == "S")
                                                     echo "<font color='Green'><b>ISENTO</b></font>";
                                                 else
-                                                    echo "<font color='Red'><b>NÃO</b></font>";
+                                                    echo "<font color='Red'><b>NÃƒO</b></font>";
                                             }
                                             ?>
                                         </div>
                                     </td>
                                     <td>
 <? if ($dadosComissao["permissao"] > 10) { ?>
-                                                <a href="editarInscricao.php?idp=<? echo $dadosPart[0]; ?>" style="text-align:center"><img src='images/edit.gif' border='0' style="padding:0; margin:0;" alt="Editar Inscrição" title="Editar Inscrição"></a>
+                                                <a href="editarInscricao.php?idp=<? echo $dadosPart[0]; ?>" style="text-align:center"><img src='images/edit.gif' border='0' style="padding:0; margin:0;" alt="Editar InscriÃ§Ã£o" title="Editar InscriÃ§Ã£o"></a>
 
-                                                <a href="javascript: abrir('excluir_participante.php?idp=<? echo $dadosPart[0] ?>')"><img src='images/excluir.gif' border='0' width="9" height="9" alt="Excluir Inscrição" title="Excluir Inscrição"></a>
+                                                <a href="javascript: abrir('excluir_participante.php?idp=<? echo $dadosPart[0] ?>')"><img src='images/excluir.gif' border='0' width="9" height="9" alt="Excluir InscriÃ§Ã£o" title="Excluir InscriÃ§Ã£o"></a>
 
-                                                <a href="../autoatendimento/crachas/EmitirCrachas.php?id=<? echo $dadosPart["id"]; ?>" target="_blank"><img src='images/impressora.gif' border='0' width="25" height="25" style="padding:0 0 0 0" alt="Crachá" title="Crachá"></a>
+                                                <a href="../autoatendimento/crachas/EmitirCrachas.php?id=<? echo $dadosPart["id"]; ?>" target="_blank"><img src='images/impressora.gif' border='0' width="25" height="25" style="padding:0 0 0 0" alt="CrachÃ¡" title="CrachÃ¡"></a>
 
                                                 <a href="certificados/certificadoParticipante.php?id=<? echo $dadosPart["id"]; ?>" target="_blank"><img src="images/ico_pdf.gif" width="15" height="15" border="0" alt="Certificado" title="Certificado" /></a>
 
