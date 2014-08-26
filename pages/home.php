@@ -48,7 +48,7 @@ position: absolute;"
                     </tr>
                     <tr>
                         <td >
-                            18/08
+                            22/08
                         </td>
                         <td>
                             EMABI-Limite para envio de resumos
@@ -82,3 +82,14 @@ position: absolute;"
                 </table>
             </div>
 </div>
+<div class="alert alert-success">
+                                <p><h4>ATEN&Ccedil;&Atilde;O </h4>
+<a href="http://www.dbi.uem.br/emabi2014/ensalamento.pdf" title="Ensalamento">Baixe aqui ensalamento dos minicursos</a>      
+ </div>
+
+ <div class="alert alert-success">
+                                <p><h4>ATEN&Ccedil;&Atilde;O </h4>
+                                <p> Data de submissão de resumos prorrogada para 22 de agosto.
+                                 </p>
+       </div>
+ 

@@ -39,7 +39,7 @@ include "includes/head.php";
                                 <div class="alert alert-error">
                                     
                                 <p>
-                                    Os resumos deverão ser enviados para <b>resumo.emabi2014@gmail.com</b>  até 18 de agosto de 2014.
+                                    Os resumos deverão ser enviados para <b>resumo.emabi2014@gmail.com</b>  até 22 de agosto de 2014.
                                 </p>
                                 </div>
                                 <p>
@@ -52,7 +52,7 @@ include "includes/head.php";
                             <p>
                                 Os resumos de trabalhos científicos deverão ser enviados
                                 SOMENTE eletronicamente para o e-mail: <b>resumo.emabi2014@gmail.com</b>,
-                                impreterivelmente até o dia 18 de agosto de 2014.
+                                impreterivelmente até o dia 22 de agosto de 2014.
                             </p>
                             <p><b>Normas para submissão de resumos online</b></p>
                             <ul>
